@@ -17,21 +17,12 @@ class HexadecimalClock {
 	constructor(id) {
 		this.id = id;
 		this.element = document.getElementById(id);
-	}
-	
-	get_seconds(now) {
-		var sec = now.getHours() * 60 * 60;
-		sec += now.getMinutes() * 60;
-		sec += now.getSeconds();
-		
-		return sec;
+		this.hextime = new HexadecimalTime();
 	}
 	
 	update() {
-		var now = new Date();
-		var seconds = this.get_seconds(now);
-		
-		this.element.innerHTML = seconds;
+		var now = new HexadecimalTime();
+		this.element.innerHTML = now.getHexTime();
 	}
 	
 	// update each 1.247051886792453 base(10) seconds
@@ -41,6 +32,6 @@ class HexadecimalClock {
 		var that = this;
 		setTimeout(function() {
 			that.show();
-		}, (84600 / 16 / 256 / 16 * 1000));
+		}, that.hextime.getTicker());
 	}		
 }

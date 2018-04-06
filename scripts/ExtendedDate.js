@@ -39,6 +39,13 @@ class HexadecimalTime extends ExtendedDate {
 		//this.fraction = 65536 / 86400;*/
 	//}
 	
+	/**
+	 * Hexclock runs at hexseconds
+	 */
+	getTicker() {
+		return (84600 / 16 / 256 / 16 * 1000);
+	}
+	
 	getHexTime() {
 		var sec = this.getTotalSeconds() * 65536 / 86400;
 		return "." + ("0000" + this.dec2hex(sec)).slice(-4);
