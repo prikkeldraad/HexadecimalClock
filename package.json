@@ -1,0 +1,33 @@
+{
+  "name": "hexadecimalclock",
+  "version": "1.0.0",
+  "description": "Clock that displays time in hexadecimal numbers (0-F)",
+  "main": "scripts/HexadecimalClock.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jasmine": "^3.5.0",
+    "semver": "^7.1.3"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "semver": "^7.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prikkeldraad/HexadecimalClock.git"
+  },
+  "keywords": [
+    "clock"
+  ],
+  "author": "Prikkeldraad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prikkeldraad/HexadecimalClock/issues"
+  },
+  "homepage": "https://github.com/prikkeldraad/HexadecimalClock#readme"
+}
